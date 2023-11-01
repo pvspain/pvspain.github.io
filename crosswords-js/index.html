@@ -11,10 +11,12 @@
         opacity: 0;
       }
     </style>
-    <!-- PT Sans webfont. -->
+    <!-- PT Sans webfont. Load asynchronously-->
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css?family=PT+Sans:400,700i&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
     <!-- Application entry point -->
     
@@ -26,6 +28,10 @@
     <noscript>
       Your browser has disabled or does not support JavaScript. The
       crosswords-js package does not work without JavaScript.
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=PT+Sans:400,700i&display=swap"
+      />
     </noscript>
     <div id="banner">
       <span class="title">crosswords-js</span>
